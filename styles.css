@@ -1,39 +1,36 @@
 /*
     index.html
+    **********************
+    color palette: https://coolors.co/palette/ccd5ae-e9edc9-fefae0-faedcd-d4a373
+    **********************
 */
 
 * {
-    font-family: Verdana, sans-serif;
-    color:black;
+    margin: 0;
 }
 
 body {
-    background-color: rgb(219, 200, 173);
+    font-family: 'Poppins', sans-serif;
+    color: rgb(27, 27, 27);
+    background-color: #fefae0;
+}
+
+.navbar {
+    top: 0;
+    position: fixed;
+    background-color: #e9edc9;
+    width: 100%;
+    padding: 18px;
     display: flex;
-    justify-content: center;
+}
+
+.search-icon {
+    filter: brightness(0);
+    width: 32px;
 }
 
 .hero {
-    text-align: center;
-    width: 900px;
+    margin-top: 100px;
+    height: 2500px;
 }
 
-h1 {
-    color: rgb(58, 51, 42);
-    font-weight: 900;
-    font-size: 52px;
-    line-height: 64px;
-}
-
-.recipes {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    width: auto;
-}
-
-ul {
-    text-align: left;
-    list-style: none;
-    line-height: 48px;
-}
