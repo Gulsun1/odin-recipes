@@ -22,6 +22,7 @@ body {
     width: 100%;
     padding: 18px;
     display: flex;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
 h1 {
@@ -42,13 +43,24 @@ h1 {
 }
 
 .hero {
-    margin-top: 100px;
+    margin-top: 80px;
     text-align: center;
     font-size: 54px;
     font-weight: 900;
     line-height: 1.3em;
     padding-top: 128px;
     padding-bottom: 128px;
+    background-image: linear-gradient(transparent, transparent, transparent, #fefae0 99%), url("./img/hero_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-blend-mode: lighten;
+    background-color: rgba(254, 250, 225, 0.5);
+}
+
+#hero-highlight-text {
+    background-color:#f18053;
+    padding: 0px 12px;
 }
 
 ul {
@@ -65,20 +77,41 @@ a {
     color: black;
 }
 
+.section-2 {
+    margin-top: 42px;
+}
+
 .recipe-card {
-    border: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    border: solid black 0px;
+    background-color: rgb(254, 255, 247);
     border-radius: 12px;
     transition: 0.5s;
-    font-size: 18px;
+    font-size: 20px;
     margin: 32px;
-    padding: 32px;
+    padding: 24px 24px 32px 24px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.02);
 }
 
 .recipe-card:hover {
-    font-size: 24px;
     font-weight: 900;
-    transition: 0.5s;
-    background-color: rgba(0, 0, 0, 0.171);
-    margin: 10px;
+    transition: 0.8s;
+    box-shadow: 0px 20px 40px 10px rgba(0, 0, 0, 0.1);
+    scale: 1.1;
+}
+
+.card-img {
+    width: 256px;
+    height: 256px;
+    margin: 24px;
+    margin-bottom: 32px;
+    border-radius: 2%;
+    object-fit: cover;
+}
+
+.section-2-bg {
+    position: absolute
+    
 }
 
