@@ -24,9 +24,15 @@ body {
     display: flex;
 }
 
+h1 {
+    margin: auto;
+}
+
 .search-icon {
     filter: brightness(0);
     width: 32px;
+    margin-right: 32px;
+    margin-left: -32px;
 }
 
 .hero {
@@ -34,3 +40,33 @@ body {
     height: 2500px;
 }
 
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+li {
+    display: inline-block;  
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.recipe-card {
+    border: solid black 2px;
+    border-radius: 12px;
+    transition: 0.5s;
+    font-size: 18px;
+    margin: 32px;
+    padding: 32px;
+}
+
+.recipe-card:hover {
+    font-size: 24px;
+    font-weight: 900;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.171);
+    margin: 0;
+}
