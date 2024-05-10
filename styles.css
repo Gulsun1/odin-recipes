@@ -33,11 +33,22 @@ h1 {
     width: 32px;
     margin-right: 32px;
     margin-left: -32px;
+    transition: 0.3s;
+}
+
+.search-icon:hover {
+    transition: 0.3s;
+    transform: scale(1.125);
 }
 
 .hero {
     margin-top: 100px;
-    height: 2500px;
+    text-align: center;
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1.3em;
+    padding-top: 128px;
+    padding-bottom: 128px;
 }
 
 ul {
@@ -70,3 +81,4 @@ a {
     background-color: rgba(0, 0, 0, 0.171);
     margin: 0;
 }
+
