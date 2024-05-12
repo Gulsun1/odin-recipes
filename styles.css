@@ -5,6 +5,23 @@
     **********************
 */
 
+/*Custom Scrollbar*/
+
+::-webkit-scrollbar {
+    width: 0.9vw;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0.8vw;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0.8vw;
+    -webkit-box-shadow: inset 0 0 0.8vw     rgba(0,0,0,0.5); 
+}
+
+/*General styles*/
+
 * {
     margin: 0;
 }
@@ -12,21 +29,24 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: rgb(27, 27, 27);
-    background-color: #fefae0;
+    background-color: #FAEDCD;
 }
+
+/*Navbar*/
 
 .navbar {
     top: 0;
     position: fixed;
     background-color: #e9edc9;
     width: 100%;
-    padding: 18px;
+    padding: 2vh;
     display: flex;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    z-index: 1;
 }
 
-h1 {
-    margin: auto;
+#navbar-title {
+    line-height: normal;
 }
 
 .search-icon {
@@ -42,20 +62,44 @@ h1 {
     transform: scale(1.125);
 }
 
+/*Hero section*/
+
+.hero-title {
+    font-size: 86px;
+    line-height: normal;
+}
+
 .hero {
+    background-image: linear-gradient(transparent, transparent, transparent, #FAEDCD 99%), url("./img/hero_bg.jpg");
+}
+
+.hero-recipe-macaroni {
+    background-image: linear-gradient(transparent, transparent, transparent, #FAEDCD 99%), url("./recipes/macaroni-and-cheese/macaroni-and-cheese.jpg");
+}
+
+.hero-recipe-lasagna {
+    background-image: linear-gradient(transparent, transparent, transparent, #FAEDCD 99%), url("./recipes/lasagna/lasagna.jpg");
+}
+
+.hero-recipe-korean-beef {
+    background-image: linear-gradient(transparent, transparent, transparent, #FAEDCD 99%), url("./recipes/korean-beef-bowl/korean-beef-bowl.jpg");
+}
+
+.hero,
+.hero-recipe-macaroni,
+.hero-recipe-lasagna,
+.hero-recipe-korean-beef {
     margin-top: 80px;
     text-align: center;
     font-size: 54px;
     font-weight: 900;
     line-height: 1.3em;
-    padding-top: 128px;
-    padding-bottom: 128px;
-    background-image: linear-gradient(transparent, transparent, transparent, #fefae0 99%), url("./img/hero_bg.jpg");
+    padding: 200px 0px;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100vw;
     background-position: center;
     background-blend-mode: lighten;
-    background-color: rgba(254, 250, 225, 0.5);
+    background-color: rgba(254, 250, 225, 0.3);
 }
 
 #hero-highlight-text {
@@ -63,13 +107,26 @@ h1 {
     padding: 0px 12px;
 }
 
-ul {
-    list-style-type: none;
-    text-align: center;
+/*Text properties*/
+
+h1, 
+h2 {
+    margin: auto;
 }
 
-li {
-    display: inline-block;  
+h2 {
+    font-size: 32px;
+    line-height: 3em;
+}
+
+h3,
+h4,
+h5 {
+    line-height: 3em;
+}
+
+p {
+    line-height: 2.5em;
 }
 
 a {
@@ -77,26 +134,32 @@ a {
     color: black;
 }
 
+/*Home page cards*/
+
 .section-2 {
-    margin-top: 42px;
+    text-align: center;
+}
+
+#main-recipe-list {
+    text-align: center;
+    list-style-type: none;
+    display: inline-flex;
 }
 
 .recipe-card {
-    display: flex;
-    flex-direction: column;
     border: solid black 0px;
     background-color: rgb(254, 255, 247);
     border-radius: 12px;
-    transition: 0.5s;
     font-size: 20px;
+    transition: 0.5s;
     margin: 32px;
-    padding: 24px 24px 32px 24px;
+    padding: 24px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.02);
 }
 
 .recipe-card:hover {
     font-weight: 900;
-    transition: 0.8s;
+    transition: 0.5s;
     box-shadow: 0px 20px 40px 10px rgba(0, 0, 0, 0.1);
     scale: 1.1;
 }
@@ -105,13 +168,22 @@ a {
     width: 256px;
     height: 256px;
     margin: 24px;
-    margin-bottom: 32px;
     border-radius: 2%;
     object-fit: cover;
 }
 
-.section-2-bg {
-    position: absolute
-    
+/*Recipe instructions*/
+
+.recipe-instructions-card {
+    background-color: white;
+    width: 1000px;
+    margin: 60px auto 60px auto;
+    padding: 64px 128px;
+    border-radius: 24px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.192);
 }
 
+.recipe-lists {
+    text-align: left;
+    line-height: 2.5em;
+}
